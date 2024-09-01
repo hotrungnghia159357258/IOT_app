@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AdafruitIoService {
   private baseUrl='https://io.adafruit.com/api/v2';
   private username='nghiahogia';
-  private apiKey='aio_SFqo79hhNATra0LX8LMaXiYWui3o';
+  private apiKey='';
   private httpOptions= {
     headers: new HttpHeaders({
       'X-AIO-Key': this.apiKey
