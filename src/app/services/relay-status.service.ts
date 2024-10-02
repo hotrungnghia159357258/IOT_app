@@ -14,8 +14,10 @@ export interface RelayStatus
   providedIn: 'root'
 })
 export class RelayStatusService {
-  //private apiURL= 'http://localhost:3000/relay-status';
-  private apiURL= 'http://10.0.129.187:3000/relay-status';
+  private apiURL= 'http://localhost:3000/relay-status';
+  //private apiURL= 'http://10.0.112.139:3000/relay-status';
+  //private apiURL= 'http://192.168.192.183:3000/relay-status';
+  //private apiURL= 'http://172.28.182.157:3000/relay-status';
   constructor(private http:HttpClient) { }
 
   saveRelaystate(state:any){

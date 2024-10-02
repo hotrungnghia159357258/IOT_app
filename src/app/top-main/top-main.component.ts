@@ -13,7 +13,7 @@ export class TopMainComponent  implements OnInit{
   switch2 : boolean=true;
   switch3 : boolean=true;
   switch4 : boolean=true;
-  constructor(private adafruitService: AdafruitIoService,private relay_stateService:RelayStatusService,
+  constructor(private relay_stateService:RelayStatusService,
     private mqttService:MQTTHiveMQService  ) {}
   ngOnInit(): void {
       //this.getFeedData();
@@ -24,7 +24,7 @@ export class TopMainComponent  implements OnInit{
       
   }
   
-  getFeedData() 
+  /* getFeedData() 
   {
     this.adafruitService.getFeedValue('sw1').subscribe(data=>{
       this.switch1=data[0].value==='1'
@@ -38,7 +38,7 @@ export class TopMainComponent  implements OnInit{
     this.adafruitService.getFeedValue('sw4').subscribe(data=>{
       this.switch4=data[0].value==='1'
     });
-  }
+  } */
   fetchStatus()
   {
     this.relay_stateService.getLastStatus().subscribe((status)=>{
@@ -61,23 +61,23 @@ export class TopMainComponent  implements OnInit{
   }
   toggleSwitch1(): void {
     //this.switch1 = !this.switch1;
-    this.adafruitService.sendFeedValue('sw1', this.switch1 ? '1' : '0').subscribe();  
+    //this.adafruitService.sendFeedValue('sw1', this.switch1 ? '1' : '0').subscribe();  
     this.handleRelayData(); 
     
   }
   toggleSwitch2(): void {
     //this.switch1 = !this.switch1;
-    this.adafruitService.sendFeedValue('sw2', this.switch2 ? '1' : '0').subscribe(); 
+    //this.adafruitService.sendFeedValue('sw2', this.switch2 ? '1' : '0').subscribe(); 
     this.handleRelayData();   
   }
   toggleSwitch3(): void {
     //this.switch1 = !this.switch1;
-    this.adafruitService.sendFeedValue('sw3', this.switch3 ? '1' : '0').subscribe();
+    //this.adafruitService.sendFeedValue('sw3', this.switch3 ? '1' : '0').subscribe();
     this.handleRelayData();    
   }
   toggleSwitch4(): void {
     //this.switch1 = !this.switch1;
-    this.adafruitService.sendFeedValue('sw4', this.switch4 ? '1' : '0').subscribe();    
+    //this.adafruitService.sendFeedValue('sw4', this.switch4 ? '1' : '0').subscribe();    
     this.handleRelayData();
   }
 

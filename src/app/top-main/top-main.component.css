@@ -64,3 +64,6 @@
       }
     }
   }
+  .mat-slide-toggle {
+    transform: scale(0.6) translateX(-10px);
+}
