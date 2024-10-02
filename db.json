@@ -12158,6 +12158,62 @@
       "relay4": false,
       "timestamp": "2024-09-17T01:46:53.849Z",
       "id": 1519
+    },
+    {
+      "relay1": false,
+      "relay2": false,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T10:36:27.870Z",
+      "id": 1520
+    },
+    {
+      "relay1": false,
+      "relay2": true,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T10:36:41.077Z",
+      "id": 1521
+    },
+    {
+      "relay1": false,
+      "relay2": true,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T10:36:41.842Z",
+      "id": 1522
+    },
+    {
+      "relay1": false,
+      "relay2": false,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T10:37:21.085Z",
+      "id": 1523
+    },
+    {
+      "relay1": false,
+      "relay2": false,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T11:14:18.527Z",
+      "id": 1524
+    },
+    {
+      "relay1": false,
+      "relay2": false,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T11:14:28.047Z",
+      "id": 1525
+    },
+    {
+      "relay1": false,
+      "relay2": false,
+      "relay3": true,
+      "relay4": false,
+      "timestamp": "2024-09-25T12:46:03.192Z",
+      "id": 1526
     }
   ],
   "sensors": [
@@ -23003,6 +23059,104 @@
       "air": 1002.24,
       "timestamp": "2024-09-17T01:46:53.579Z",
       "id": 1549
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T10:36:27.668Z",
+      "id": 1550
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T10:37:20.798Z",
+      "id": 1551
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T11:14:18.224Z",
+      "id": 1552
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:20:51.521Z",
+      "id": 1553
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:20:54.865Z",
+      "id": 1554
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:29:11.925Z",
+      "id": 1555
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:31:24.297Z",
+      "id": 1556
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:36:32.329Z",
+      "id": 1557
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:38:10.744Z",
+      "id": 1558
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-25T14:38:35.286Z",
+      "id": 1559
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-26T04:09:51.368Z",
+      "id": 1560
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-26T04:10:24.352Z",
+      "id": 1561
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-26T04:13:49.106Z",
+      "id": 1562
+    },
+    {
+      "temp": 27.41,
+      "humi": 71.68,
+      "air": 1006.98,
+      "timestamp": "2024-09-26T04:17:10.626Z",
+      "id": 1563
     }
   ]
 }

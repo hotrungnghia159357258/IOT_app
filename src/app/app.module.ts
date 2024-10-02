@@ -30,7 +30,9 @@ import { HumiChartComponent } from './chart-main/humi-chart.component';
 import { LogComponent } from './log/log.component';
 import { MqttBrokerComponent } from './mqtt-broker/mqtt-broker.component';
 import { CalendarComponent } from './calendar/calendar.component';
+
 import  { AngularFireModule  } from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from 'src/environments/environment';
 
 
@@ -67,7 +69,8 @@ import { environment } from 'src/environments/environment';
     MatNativeDateModule,
     
     NgxGaugeModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     
     
     

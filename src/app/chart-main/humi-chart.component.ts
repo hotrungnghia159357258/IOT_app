@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SensorDataService } from '../services/sensor-data.service';
 import { Chart, registerables } from 'chart.js';
 import { interval, Subscription } from 'rxjs';
@@ -106,6 +106,9 @@ export class HumiChartComponent implements OnInit,OnDestroy {
     if (this.updateSubscription) {
       this.updateSubscription.unsubscribe();
     }
+    if (this.combineChart) {
+      this.combineChart.destroy(); // Destroy the chart instance when the component is destroyed
+    }
   }
   filterDataByDate(data: SensorData[], selectedDate: Date): SensorData[] {
     return data.filter(sensor => {
@@ -115,7 +118,7 @@ export class HumiChartComponent implements OnInit,OnDestroy {
   }
   filterDataByPeriod(): Observable<SensorData[]> {
     if (this.selectedPeriod === 'Day') {
-      return this.sensorservice.getSensorsForDay(this.selectedDate);
+      return this.sensorservice.getSensorsForDay(new Date());
     } else if (this.selectedPeriod === 'Week') {
       return this.sensorservice.getSensorsForLastNDays(2);
     } else if (this.selectedPeriod === 'Month') {
@@ -126,6 +129,9 @@ export class HumiChartComponent implements OnInit,OnDestroy {
   fetchAndCreatChart():void
   {
     this.filterDataByPeriod().subscribe((data: SensorData[]) => {
+      /* if (this.combineChart) {  
+        this.combineChart.destroy();
+      } */
       const times = data.map(sensor => new Date(sensor.timestamp));
       const temps = data.map(sensor => sensor.temp);
       const humis = data.map(sensor => sensor.humi);
@@ -137,12 +143,16 @@ export class HumiChartComponent implements OnInit,OnDestroy {
   }
   fetchAndUpdateChart():void{
     this.filterDataByPeriod().subscribe((data: SensorData[]) => {
+      /* if (!this.combineChart) {
+        this.fetchAndCreatChart();
+        return;
+      } */
       const times = data.map(sensor => new Date(sensor.timestamp));
       const temps = data.map(sensor => sensor.temp);
       const humis = data.map(sensor => sensor.humi);
       const airs  = data.map(sensor => sensor.air);
       const formatted=formatDate(this.selectedDate, 'dd/MM/yyyy', 'en-US');
-      let title=`Day ${formatted} ttt`; 
+      let title=`Day ${formatted} `; 
       if (this.selectedPeriod === 'Week')
         title='Last 2 day';
       else if(this.selectedPeriod === 'Month')

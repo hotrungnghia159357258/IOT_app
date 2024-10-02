@@ -41,11 +41,11 @@ constructor(private sensorService:SensorDataService,private relayService:RelaySt
   ngOnInit(): void {
     //this.renderGauge();
     //this.renderLog();
-    this.fetchLogs();
+    //this.fetchLogs();
     this.fetchGauge();
     this.updateSubscription = interval(10000).subscribe(() => {
       this.fetchGauge();
-      this.fetchLogs();
+      //this.fetchLogs();
     });
   }
   ngOnDestroy(): void {

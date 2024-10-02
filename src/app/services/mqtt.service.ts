@@ -73,12 +73,14 @@ export class MQTTHiveMQService {
     this.MQTTclient.on('message',(topic, message) => {
       const data = JSON.parse(message.toString());
       if (topic===this.topic){
-      this.sensorService.saveSensorData(data).subscribe();  //when topic a public do this method 
+      //this.sensorService.saveSensorData(data).subscribe();  //when topic a public do this method 
+      this.sensorService.saveSensorData(data);
       console.log(data);
       }
     else if (topic===this.topic1)
     {
-      this.relayService.saveRelaystate(data).subscribe();     //when topic b public do this method
+      //this.relayService.saveRelaystate(data).subscribe();     //when topic b public do this method
+      this.relayService.saveRelaystate(data);
       console.log(data);
     }
     });
